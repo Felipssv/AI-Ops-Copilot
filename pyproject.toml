@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-ops-copilot"
+version = "0.1.0"
+description = "Aplicação local de análise operacional, Machine Learning e agente analítico com LLM local para operações de delivery."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "AI Ops Copilot Engineering" }
+]
+dependencies = [
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "scikit-learn>=1.4.0",
+    "joblib>=1.3.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.28.0",
+    "python-multipart>=0.0.9",
+    "httpx>=0.27.0",
+    "streamlit>=1.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests/unit",
+    "tests/integration",
+    "tests/end_to_end",
+]
+pythonpath = ["src"]
+

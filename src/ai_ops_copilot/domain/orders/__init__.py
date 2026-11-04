@@ -1,0 +1,43 @@
+"""Domínio de pedidos: entidades, esquemas e regras de cálculo de atraso."""
+
+from ai_ops_copilot.domain.orders.models import (
+    ALLOWED_ML_FEATURES,
+    DEFAULT_LATE_TOLERANCE_MINUTES,
+    FORBIDDEN_LEAKAGE_COLUMNS,
+    MAX_ACTUAL_MINUTES,
+    MAX_ESTIMATED_MINUTES,
+    MAX_ORDER_VALUE,
+    MIN_ACTUAL_MINUTES,
+    MIN_ESTIMATED_MINUTES,
+    MIN_ORDER_VALUE,
+    OrderCategory,
+    OrderPredictionFeatures,
+    REQUIRED_ORDER_COLUMNS,
+    Region,
+    VALID_ORDER_CATEGORIES,
+    VALID_REGIONS,
+    compute_actual_minutes,
+    compute_promised_minutes,
+    evaluate_is_late,
+)
+
+__all__ = [
+    "ALLOWED_ML_FEATURES",
+    "DEFAULT_LATE_TOLERANCE_MINUTES",
+    "FORBIDDEN_LEAKAGE_COLUMNS",
+    "MAX_ACTUAL_MINUTES",
+    "MAX_ESTIMATED_MINUTES",
+    "MAX_ORDER_VALUE",
+    "MIN_ACTUAL_MINUTES",
+    "MIN_ESTIMATED_MINUTES",
+    "MIN_ORDER_VALUE",
+    "OrderCategory",
+    "OrderPredictionFeatures",
+    "REQUIRED_ORDER_COLUMNS",
+    "Region",
+    "VALID_ORDER_CATEGORIES",
+    "VALID_REGIONS",
+    "compute_actual_minutes",
+    "compute_promised_minutes",
+    "evaluate_is_late",
+]
