@@ -32,5 +32,5 @@ def load_orders_csv(file_path: Path | str) -> pd.DataFrame:
 
     if missing_cols:
         raise InvalidFileFormatError(message=f"As seguintes colunas estão faltando: {missing_cols}",
-                                     details={"file_name": path.name, " missing_columns": missing_cols})
+                                     details={"file_name": path.name, "missing_columns": missing_cols})
     return df
