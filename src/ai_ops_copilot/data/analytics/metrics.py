@@ -14,7 +14,7 @@ def enrich_orders_features(df: pd.DataFrame) -> pd.DataFrame:
     dt = pd.to_datetime(enriched["created_at"])
 
     enriched["hour_of_day"] = dt.dt.hour
-    enriched["day_of_week"] = dt.dt.dayofweek
+    enriched["day_of_week"] = dt.dt.day_of_week
     enriched["is_weekend"] = enriched["day_of_week"].isin([5,6])
 
     enriched["promised_total_minutes"] = (
