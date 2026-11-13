@@ -19,6 +19,6 @@ def load_model_pipeline(artifact_path: Path | str)-> Pipeline:
     path = Path(artifact_path)
 
     if not path.exists():
-        raise DatasetNotFoundError(message=f"Artefato de modelo não encontrado {path.name}!", details={"artifact_path": str(path)})
+        raise DatasetNotFoundError(path.name)
 
     return joblib.load(path)
